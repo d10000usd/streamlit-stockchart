@@ -10,7 +10,7 @@ import numpy as np
 # 'https://raw.githubusercontent.com/d10000usd/streamlit-stockchart/main/SP500.csv'
 # copy permalinghttps://github.com/d10000usd/streamlit-stockchart/blob/aed3c3deab3492c0ae7df8609eb2fff15af91254/SP500.csv
 url = 'https://raw.githubusercontent.com/d10000usd/streamlit-stockchart/main/SP500.csv'
-snp500 = pd.read_csv(url,index_col=0)
+snp500 = pd.read_csv(url)
 symbols = snp500['Symbol'].sort_values().tolist()
 
 st.set_page_config(
