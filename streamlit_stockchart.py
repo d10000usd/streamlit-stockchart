@@ -6,8 +6,8 @@ import datetime as dt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
-
-snp500 = pd.read_csv("https://github.com/d10000usd/streamlit-stockchart/blob/e89b4789b9d53b5009038a799327de1edc5d0290/SP500.csv")
+url = "https://github.com/d10000usd/streamlit-stockchart/blob/e89b4789b9d53b5009038a799327de1edc5d0290/SP500.csv"
+snp500 = pd.read_csv(url,index_col=0)
 symbols = snp500['Symbol'].sort_values().tolist()
 
 st.set_page_config(
