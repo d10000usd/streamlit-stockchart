@@ -6,7 +6,10 @@ import datetime as dt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
-url = "https://github.com/d10000usd/streamlit-stockchart/blob/e89b4789b9d53b5009038a799327de1edc5d0290/SP500.csv"
+# 'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv'
+# 'https://raw.githubusercontent.com/d10000usd/streamlit-stockchart/main/SP500.csv'
+# copy permalinghttps://github.com/d10000usd/streamlit-stockchart/blob/aed3c3deab3492c0ae7df8609eb2fff15af91254/SP500.csv
+url = 'https://raw.githubusercontent.com/d10000usd/streamlit-stockchart/main/SP500.csv'
 snp500 = pd.read_csv(url,index_col=0)
 symbols = snp500['Symbol'].sort_values().tolist()
 
